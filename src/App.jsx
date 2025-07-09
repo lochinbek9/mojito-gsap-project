@@ -1,17 +1,18 @@
-import { useState } from 'react'
 
-import './App.css'
+import gsap from "gsap";
+import { ScrollTrigger, SplitText } from "gsap/all"
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
 
-function App() {
-  const [count, setCount] = useState(0)
+gsap.registerPlugin(ScrollTrigger, SplitText);
 
-  return (
-    <>
-   
-   <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
-    </>
+
+const App = () =>{
+  return(
+    <main>
+      <Navbar/>
+      <Hero/>
+    </main>
   )
 }
 
